@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부동산 113
+    </title>
+    <style>
+
+        * {
+            margin : 0;
+            padding : 0;
+            font : normal 12px "고딕";
+
+        }
+        ul, ol {list-style : none;}
+        a {text-decoration: none; color:#111;}
+        input, textarea {outline : none;}
+
+
+        #wrapper {
+            width : 1000px;
+            height : auto;
+            margin : 0 auto;
+
+        }
+        header {
+            position : relative;
+            width :100%;
+            height : 80px;
+            background : url('./images/header_bg.gif');
+
+        }
+        header .div {
+            width :1000px;
+            height: 100%;
+            margin : 0 auto;
+            overflow : hidden;
+            
+        }
+        header .logo{
+            margin-top : 6px;
+            float : left;
+        }
+        header .gnb {
+            float : right;
+            width : 620px;
+            height: 32px;
+            margin-top : 14px;
+            overflow : hidden;
+        }
+
+        header .gnb > li {
+            float : left;
+            width:20%;
+            height: 100%;
+            box-sizing: border-box;
+           text-align : right;
+        }
+        header .gnb > li >a:hover{
+            color : #7b231f;
+        }
+        header .gnb > li > a{
+            font-size:17px;
+            font-weight: bolder;
+        }
+   
+        header .latest {
+
+            position :absolute;
+            left :0;
+            bottom :0;
+            width : 50%;
+            height : 30px;
+            box-sizing: border-box;
+        }
+     
+        header .latest > a:nth-child(1) {position :relative;  left : 5px; top: 4px;} 
+        header .latest > a:nth-child(2) {position :relative; left : 5px; top: -4px;} 
+        
+        header .latest > a:nth-child(2)::before{
+            content : url('./images/ico_latest.gif');
+        }
+        header .latest > a:nth-child(2):hover{
+            text-decoration: underline;
+        }
+        main{
+            width: 1000px;
+            height : auto;
+            margin:5px auto; 
+        }
+        main > div {
+            overflow : hidden;        
+        }
+        main > div >div{
+
+            border : 1px solid green;
+            box-sizing: border-box;
+        }
+        main > div >.banner{
+    
+            float:left;
+            width : 588px;
+            height : 320px;
+            overflow :hidden;
+            background-image: url(./images/main_banner_bg.jpg);
+            display : flex;
+            justify-content: center;
+            align-items: center; /*이 배너라는 공간 내에 이미지를 중앙에 두는 법*/
+       
+        }
+
+        main > div > .call {
+            float : right;
+            width : 406px;
+            height : 133px;
+            background-color: #f2f2f2;
+            position : relative; 
+        }
+        main > div > .call > img { position : absolute; }
+
+
+        main > div > .call > img:nth-child(1) {
+            left : 20px;
+            top  : 20px;
+        }
+        main > div > .call > img:nth-child(2) {
+            left : 20px;
+            top  : 46px;
+        }
+        main > div > .call > img:nth-child(3) {
+            left : 30px;
+            top  : 75px;
+        }
+        main > div > .call > img:nth-child(4) {
+            right :  17px;
+        }
+
+        main > div > .qna{
+            float : right;
+            width : 406px;
+            height : 182px;
+            margin-top : 5px;
+            display : flex;
+            flex-direction: row;
+        }
+
+        main>div> .qna > a::before{
+            content : url('./images/ico_latest.gif');
+        }
+       main>div> .qna > a{
+            text-decoration: underline;
+        }
+        main > section{
+            overflow : hidden;
+            margin : 5px auto;
+        }
+        main > section >aside {
+            float : left;
+            width : 195px;
+            height : 760px;
+            border : 1px solid green;
+            box-sizing: border-box;
+        }
+        main > section > article {
+            float : right;
+            width : 800px;
+            height : 250px;
+            border : 1px solid green;
+            box-sizing: border-box;
+        }
+
+        main > section> article:nth-child(3){
+            margin-top : 5px;
+            margin-bottom : 5px;
+            
+        }
+
+        footer {
+            width : 1000px;
+            height : 130px;
+            border : 1px solid blue;
+            box-sizing: border-box;
+            margin : 0 0 10px;
+        }
+ 
+    
+    </style>
+</head>
+<body>
+    <div id ="wrapper">
+
+        <header>
+            <div>
+                <a href = "#"><img src ="./images/header_logo.jpg" alt ="로고" class = "logo"></a>
+            </div>
+            <ul class = "gnb">
+                <li><a href ="#">회사소개</a></li>
+                <li><a href ="#">매물정보</a></li>
+                <li><a href ="#">매도의뢰</a></li>
+                <li><a href ="#">매입의뢰</a></li>
+                <li><a href ="#">질문답변</a></li>
+            </ul>
+            <div class = "latest">
+               <a href = "#"><img src = "./images/header_txt_latest.gif" alt = "최신매물정보" ></a> 
+               <a href = "#">
+               [아파트] 삼성동 전세 (방:3/욕실:2) / 157m2 / 매매가 21,000</a>
+            </div>
+
+        </header>
+        <main>
+            <div>
+                <div class ="banner">
+                    <img src = "images/main_banner_txt.png" alt = "배너글">
+                </div>
+                    <div class ="call">
+                    <img src = "images/main_call_tit.png" alt ="콜 타이틀">
+                    <img src = "images/main_call_txt.png" alt= "콜 텍스트">
+                    <img src = "images/main_call_num.png" alt ="콜 넘버">
+                    <img src = "images/main_call_phone.png" alt = "콜 폰">
+                </div>
+                    <div class ="qna">질문과 답변
+                        <a href = "#">테스트입니다</a>
+                    </div>
+            </div>
+        <section>
+            <aside></aside>
+            <article></article>
+            <article></article>
+            <article></article>
+        </section>
+        <footer></footer>
+        </main>
+
+    </div>
+    
+</body>
+</html>
